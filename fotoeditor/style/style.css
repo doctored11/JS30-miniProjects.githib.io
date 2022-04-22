@@ -1,0 +1,86 @@
+ :root {
+     --base: #097e61;
+     --spacing: 0px;
+     --blur: 0px;
+ }
+ 
+ img {
+     padding: var(--spacing);
+     background: var(--base);
+     filter: blur(var(--blur));
+ }
+ 
+ .img {
+     position: relative;
+ }
+ 
+ .picture {
+     box-shadow: 0 0 30px 5px #054434;
+     margin-bottom: 35px;
+ }
+ 
+ .hl {
+     color: var(--base);
+ }
+ 
+ body {
+     text-align: center;
+     background: #097e61;
+     color: white;
+     font-family: 'helvetica neue', sans-serif;
+     font-weight: 100;
+     font-size: 50px;
+ }
+ 
+ .controls {
+     margin-bottom: 50px;
+ }
+ 
+ input {
+     width: 100px;
+ }
+ 
+ .input-img {
+     width: 500px;
+     height: 30px;
+ }
+ 
+ .image-text {
+     content: "Your image url";
+     display: inline-block;
+     margin: 0;
+     margin-right: 15px;
+ }
+ 
+ .url-block {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .demotivation {
+     margin: auto;
+     position: absolute;
+     left: 0;
+     bottom: 4%;
+     right: 0;
+     font-size: 32px;
+     max-width: 900px;
+     max-height: 150px;
+     word-wrap: break-word;
+     overflow: hidden;
+ }
+ 
+ .hide {
+     display: none;
+ }
+ 
+ .doc {
+     font-size: 32px;
+     color: #67817a91;
+     position: absolute;
+     right: 50px;
+     bottom: 45px;
+ }
+}
