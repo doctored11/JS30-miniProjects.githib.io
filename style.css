@@ -79,4 +79,26 @@ a{
     transition: font-size 0.3s ease;
 
 }
+@media (max-width: 1300px) {
+    a{
+        color: brown    ;
+        word-break: break-all;
+        overflow: wrap ;
+    }
+    .project{
+        width: 30%;
+    }
+    
+}
+@media (max-width: 1500px) {
+    a{
+           
+        word-break: break-all;
+        overflow: wrap ;
+    }
+    .project{
+        width: 20%;
+    }
+    
+}
 

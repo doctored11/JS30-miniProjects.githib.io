@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+</head>
+<body>
+  <p>Open the console to view the number of adults. Press f12<br> <span style="color: gray; font: 12px;">get other results, you need to change the date of birth in the js script in index.html - he's the only file here)</span> </p>
+  <script>
+    // ## база из людей и дат 
+
+    const people = [
+      { name: 'Wes', year:2002},   //можно менять год рождения,                                             чтобы получить разный результат в консоли 
+      { name: 'Kait', year:2009},  //можно менять год рождения,                                             чтобы получить разный результат в консоли  
+      { name: 'Irv', year:1998},   //можно менять год рождения,                                             чтобы получить разный результат в консоли 
+      { name: 'Lux', year:2001}   //можно менять год рождения,                                             чтобы получить разный результат в консоли 
+    ];
+    people.sort(function(a, b) {
+      return a.year - b.year;
+    });
+
+    const comments = [
+      { text: 'Все, отбой, только с 18 лет!', id:001001},
+      { text: 'Всего один совершеннолетний, аккуратней!', id: 001002},
+      { text: 'Двоим больше 18, вполне надежно', id: 001003},
+      { text: 'Большенство - взрослые люди, все Ок', id:001004},
+      { text: 'Старики собрались)', id:001005}
+    ];
+    let age = 1;
+    
+    // проверка на совершеннолетие 
+    // есть хотя бы один 18+
+    const isAdult = people.some(function(person) {
+      const currentYear = (new Date()).getFullYear();
+      console.log(currentYear);
+
+      if(currentYear - person.year > 17) {       
+        return true;
+      }
+
+    });
+    
+    // все 18+
+    console.log({isAdult});
+    const allAdults = people.every(function(person) {
+      const currentYear = (new Date()).getFullYear();
+      if(currentYear - person.year > 17) {
+        age += 1;
+        return true; 
+      }
+    });
+    console.log(age);
+    let comment;
+    switch(age){
+      case 0:  comment = comments.find(comment => comment.id === 001001);
+      break;
+      case 1:  comment = comments.find(comment => comment.id === 001001);
+      break;
+      case 2:  comment = comments.find(comment => comment.id === 001002);
+      break;
+      case 3:  comment = comments.find(comment => comment.id === 001003);
+      break;
+      case 4:  comment = comments.find(comment => comment.id === 001004);
+      break;
+      default: comment = comments.find(comment => comment.id === 001004);
+      break;
+    }
+    console.log({allAdults});
+    console.log(comment);
+  
+
+  </script>
+</body>
+</html>
