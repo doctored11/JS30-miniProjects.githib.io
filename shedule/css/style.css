@@ -1,0 +1,57 @@
+html {
+    font-family: sans-serif;
+    background: #dbf9f8f1;
+  }
+
+  .inbox {
+    max-width: 500px;
+    margin: 120px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 12px 10px 3px rgba(47, 47, 47, 0.151);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #15caf7;
+  }
+
+  .item:last-child {
+    border-bottom: 0;
+  }
+ span{
+     position: absolute;
+     right: 10px;
+     top: 50%;
+     color: rgba(92, 92, 92, 0.814);
+     font-size: 12px;
+ }
+  input:checked + p {
+    background: #F9F9F9;
+    text-decoration: line-through;
+    
+  }
+  .block    {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-content: center;
+      align-items: center;
+  }
+
+  input[type="checkbox"] {
+    margin: 20px;
+    
+  }
+
+  p {
+    margin: 0;
+    padding: 20px;
+    flex: 1;
+    font-family:'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    border-left: 1px solid #e70b08e7;
+    max-width: 75%;
+  }
