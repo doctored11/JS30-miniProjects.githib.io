@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>😒JS14 Reference VS Copy</title>
+</head>
+<body>
+  <h1>f12</h1>
+  <p>nothing interactive and applied, I'm dealing with copying objects and links to them, it's better to watch js - if you're interested</p>
+
+  <script>
+    
+    let age = 100;
+    let age2 = age;
+    console.log(age, age2);
+    age = 200;
+    console.log(age, age2);
+
+    let name = 'doc';
+    let name2 = name;
+    console.log(name, name2);
+    name = 'ed';
+    console.log(name, name2);
+
+    
+    const players = ['ed', 'alex', 'max', 'uzbek'];
+
+   
+    const team = players;
+
+    console.log(players, team);
+   
+    team[3] = 'Lux';
+
+    
+    const team2 = players.slice();
+
+    
+    const team3 = [].concat(players);
+
+    
+    const team4 = [...players];
+    team4[3] = 'eee vdv developer🫦';
+    console.log(team4);
+
+    const team5 = Array.from(players);
+
+    
+    const person = {
+      name: 'dred vdv',
+      age: 80
+    };
+
+   
+    const captain = person;
+    captain.number = 99;
+
+   
+    const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+    console.log(cap2);
+
+    
+     const cap3 = {...person};
+
+
+    const dred = {
+      name: 'dred',
+      age: 100,
+      social: {
+        github: 'doctored11',
+        vk: 'diarywebvdv'
+      }
+    };
+
+    console.clear();
+    console.log(dred);
+
+    const dev = Object.assign({}, dred);
+
+    const dev2 = JSON.parse(JSON.stringify(dred));
+
+
+  </script>
+
+</body>
+</html>
