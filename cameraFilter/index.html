@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get User Media Code Along!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="photobooth">
+    <div class="controls">
+      <button onClick="takePhoto()">Take Photo</button>
+      <div class="rgb">
+        <button class="btn  effect  "   id="green" >green</button>
+        <button class="btn   effect "  id="blue" >blue</button>
+        <button class="btn  effect  "  id="red" >red</button>
+        <button class="btn  effect  "  id="split" >split</button>
+      </div>
+    </div>
+
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="strip"></div>
+  </div>
+
+  <audio class="snap" src="./snap.mp3" hidden></audio>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
