@@ -132,3 +132,40 @@ kbd {
     text-align: center;
     margin-bottom: 8%;
 }
+@media (max-width: 1550px){
+    .center{
+        margin: 0;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 1350px){
+    .center{
+        padding: 30px 20px;
+        margin: 0 auto;
+    }
+    .key{
+        max-width: 50px;
+    }
+    .keys{
+        margin: 0 auto;
+        max-width: 95%;
+    }
+}
+@media (max-width: 1200px){
+    .center{
+        padding: 30px 20px;
+        margin: 0 auto;
+    }
+    .key{
+        max-width: 60px;
+    }
+    .keys{
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .key-line {
+        max-width: 1225px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
